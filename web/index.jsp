@@ -11,7 +11,7 @@
     <title>Web Programming Project</title>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <h1>Hello World!</h1>
 <%
   Date date = new Date();
   out.print("<h2>" + date.toString() + "</h2>");
