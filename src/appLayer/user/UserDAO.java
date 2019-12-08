@@ -85,4 +85,28 @@ public class UserDAO {	//Access Object
 		}
 		return false;	// Something wrong in database
 	}
+	
+	public int Checkduplicaition(String userID) {
+		String SQL = "SELECT * FROM USER WHERE userID = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			if(rs.next())
+				return 1;	// That ID already exists
+			else
+				return 0;	// not exist
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {if(conn != null) conn.close();} catch(Exception e) {e.printStackTrace();}
+			try {if(pstmt != null) pstmt.close();} catch(Exception e) {e.printStackTrace();}
+			try {if(rs != null) rs.close();} catch(Exception e) {e.printStackTrace();}
+		}
+		return -2;	// Something wrong in database
+	}
 }

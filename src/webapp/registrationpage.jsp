@@ -12,16 +12,17 @@
 	<h1>
 		Registration Page <br>
 	</h1>
-	<form action="./RegisterAction.jsp" method="post">
+	<form method="post">
 		<label>ID</label> <br>
-		<input type="text" name="userID"> <br>
+		<input type="text" name="userID">
+		<input type="submit" formaction="./CheckdupAction.jsp" value="Duplicate">  <br>
 		<label>Password</label> <br>
 		<input type="password" name="userPassword"> <br>
 		<label>Name</label> <br>
 		<input type="text" name="userName"> <br>
 		<input type="radio" name="Classification" value="Buyer"> Buyer<br>
 		<input type="radio" name="Classification" value="Seller"> Seller<br>
-		<input type="submit" value="Registration">
+		<input type="submit" formaction="./RegisterAction.jsp" value="Registration">
 	</form>
 </body>
 </html>
