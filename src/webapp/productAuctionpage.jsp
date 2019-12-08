@@ -18,10 +18,6 @@
 <h1>
     Product Auction Page <br>
 </h1>
-<form action="./ProductAuctionAction.jsp" method="post">
-    <label>ID</label> <br>
-    <input type="text" name="productID"> <br>
-
     <!--
 
     <label>Product Name</label> <br>
@@ -97,7 +93,6 @@
 
 
 
-</form>
 
     <%
         String ID = request.getParameter("userID");
@@ -149,9 +144,12 @@
         }
     %>
 </table>
-
-<input type="button" value="WishList"> WishList
-<input type="submit" value="Bid!">
+<form action="./WishlistAction.jsp" method="post">
+    <input type="submit" value="WishList"> WishList <br>
+</form>
+<form action="./ProductAuctionAction.jsp" method="post">
+    <input type="submit" value="Bid!"> Bid! <br>
+</form>
 
 </body>
 </html>
