@@ -1,4 +1,4 @@
-package user;
+package appLayer.user;
 
 public class UserDTO {	// Transfer Object
 	private String userID;

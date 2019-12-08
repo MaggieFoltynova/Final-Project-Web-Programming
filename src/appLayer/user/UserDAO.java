@@ -1,4 +1,4 @@
-package user;
+package appLayer.user;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import util.DatabaseUtil;
 
 public class UserDAO {	//Access Object
-	
+
 	public int login(String userID, String userPassword) {
 		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
 		Connection conn = null;
@@ -15,6 +15,7 @@ public class UserDAO {	//Access Object
 		ResultSet rs = null;
 		try {
 			conn = DatabaseUtil.getConnection();
+			assert conn != null;
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, userID);
 			rs = pstmt.executeQuery();
@@ -34,7 +35,7 @@ public class UserDAO {	//Access Object
 		}
 		return -2;	// Something wrong in database
 	}
-	
+
 	public int registration(UserDTO user) {
 		String SQL = "INSERT INTO USER VALUE (?, ?, ?, ?)";
 		Connection conn = null;
@@ -42,6 +43,7 @@ public class UserDAO {	//Access Object
 		ResultSet rs = null;
 		try {
 			conn = DatabaseUtil.getConnection();
+			assert conn != null;
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, user.getUserID());
 			pstmt.setString(2, user.getUserPassword());
@@ -53,11 +55,12 @@ public class UserDAO {	//Access Object
 		} finally {
 			try {if(conn != null) conn.close();} catch(Exception e) {e.printStackTrace();}
 			try {if(pstmt != null) pstmt.close();} catch(Exception e) {e.printStackTrace();}
-			try {if(rs != null) rs.close();} catch(Exception e) {e.printStackTrace();}
+			try {
+			} catch(Exception e) {e.printStackTrace();}
 		}
 		return -1;	// registration failed
 	}
-	
+
 	public boolean modify(String userID, String index, String newValue) {
 		String SQL = "UPDATE USER SET ? = ? WHERE userID = ?";
 		Connection conn = null;
@@ -65,6 +68,7 @@ public class UserDAO {	//Access Object
 		ResultSet rs = null;
 		try {
 			conn = DatabaseUtil.getConnection();
+			assert conn != null;
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, index);
 			pstmt.setString(2, newValue);
@@ -76,7 +80,8 @@ public class UserDAO {	//Access Object
 		} finally {
 			try {if(conn != null) conn.close();} catch(Exception e) {e.printStackTrace();}
 			try {if(pstmt != null) pstmt.close();} catch(Exception e) {e.printStackTrace();}
-			try {if(rs != null) rs.close();} catch(Exception e) {e.printStackTrace();}
+			try {
+			} catch(Exception e) {e.printStackTrace();}
 		}
 		return false;	// Something wrong in database
 	}
