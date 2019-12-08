@@ -1,7 +1,5 @@
 package webapp;
 
-import appLayer.User;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
