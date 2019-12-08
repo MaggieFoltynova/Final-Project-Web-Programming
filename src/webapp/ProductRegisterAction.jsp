@@ -1,31 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@ page import="user.UserDTO"%>
-<%@ page import="user.UserDAO"%>
 <%@ page import="java.io.PrintWriter"%>
+<%@ page import="appLayer.product.ProductDAO" %>
+<%@ page import="appLayer.product.ProductDTO" %>
 <%
 	request.setCharacterEncoding("UTF-8");
-	String userID = request.getParameter("userID");
-	String userPassword = request.getParameter("userPassword");
-	String userName = request.getParameter("userName");
-	String Classification = request.getParameter("Classification");
+	String productID = request.getParameter("productID");
+	String productName = request.getParameter("productName");
+	String productPrice = request.getParameter("productPrice"); //can be null
+	String sellerName = request.getParameter("sellerName");
+	String sellerNumber = request.getParameter("sellerNumber");
+	String productPlace = request.getParameter("productPlace");
+	String productClassification = request.getParameter("productClassification");
 	
-	if(userID == null || userPassword == null || userName == null || Classification == null){
+	if(productID == null || productName == null || sellerName == null || sellerNumber == null || productPlace == null || productClassification == null){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
-		script.println("alert('miss in input')");
+		script.println("alert('Missing input')");
 		script.println("history.back()");
 		script.println("</script>");
 		script.close();
 		return;
 	}
 	
-	UserDAO userDAO = new UserDAO();
-	int result = userDAO.registration(new UserDTO(userID, userPassword, userName, Classification));
+	ProductDAO productDAO = new ProductDAO();
+	int result = productDAO.registration(new ProductDTO(productID, productName, productPrice,sellerName, sellerNumber, productPlace, productClassification));
 	PrintWriter script = response.getWriter();
 	if(result == -1){
 		script.println("<script>");
-		script.println("alert('same ID already exists')");
+		script.println("alert('Same product already exists')");
 		script.println("history.back()");
 		script.println("</script>");
 	}

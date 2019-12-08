@@ -27,7 +27,7 @@ public class UserDTO {	// Transfer Object
 	public String getuserClass() {
 		return userClass;
 	}
-	public void setuserClass(String userClass) {
+	public void setUserClass(String userClass) {
 		this.userClass = userClass;
 	}
 	

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import util.DatabaseUtil;
+import appLayer.util.DatabaseUtil;
 
 public class UserDAO {	//Access Object
 

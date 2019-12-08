@@ -27,8 +27,8 @@
     <input type="text" name="sellerNumber"> <br>
     <label>Trading place</label> <br>
     <input type="text" name="productPlace"> <br>
-    <input type="radio" name="Classification" value="FleaMarket">Flea Market<br>
-    <input type="radio" name="Classification" value="Auction">Auction<br>
+    <input type="radio" name="productClassification" value="FleaMarket">Flea Market<br>
+    <input type="radio" name="productClassification" value="Auction">Auction<br>
     <input type="file" name="" value="">Photo Upload<br>
     <input type="submit" value="Registration">
 </form>
