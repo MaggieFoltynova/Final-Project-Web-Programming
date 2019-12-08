@@ -14,7 +14,7 @@
 <h1>
     Product Registration Page <br>
 </h1>
-<form action="./RegisterAction.jsp" method="post">
+<form action="./ProductRegisterAction.jsp" method="post">
     <label>ID</label> <br>
     <input type="text" name="productID"> <br>
     <label>Product Name</label> <br>
