@@ -55,7 +55,7 @@ public class UserDAO {	//Access Object
 			try {if(pstmt != null) pstmt.close();} catch(Exception e) {e.printStackTrace();}
 			try {if(rs != null) rs.close();} catch(Exception e) {e.printStackTrace();}
 		}
-		return -1U;	// registration failed
+		return -1;	// registration failed
 	}
 	
 	public boolean modify(String userID, String index, String newValue) {
