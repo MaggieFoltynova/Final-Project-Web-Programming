@@ -7,8 +7,10 @@
 	request.setCharacterEncoding("UTF-8");
 	String userID = request.getParameter("userID");
 	String userPassword = request.getParameter("userPassword");
+	String userName = request.getParameter("userName");
+	String Classification = request.getParameter("Classification");
 	
-	if(userID == null || userPassword == null){
+	if(userID == null || userPassword == null || userName == null || Classification == null){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('miss in input')");
@@ -19,30 +21,17 @@
 	}
 	
 	UserDAO userDAO = new UserDAO();
-	int result = userDAO.login(userID, userPassword);
+	int result = userDAO.registration(new UserDTO(userID, userPassword, userName, Classification));
 	PrintWriter script = response.getWriter();
-	if(result == 1){		//success
-		session.setAttribute("userID", userID);
+	if(result == -1){
 		script.println("<script>");
-		script.println("location.href = 'index.jsp';");
-		script.println("</script>");
-	}
-	else if(result == 0){	//failed
-		script.println("<script>");
-		script.println("alert('Wrong password')");
+		script.println("alert('same ID already exists')");
 		script.println("history.back()");
 		script.println("</script>");
 	}
-	else if(result == -1){	//no id
+	else{
 		script.println("<script>");
-		script.println("alert('Wrong ID')");
-		script.println("history.back()");
-		script.println("</script>");
-	}
-	else{					//something wrong
-		script.println("<script>");
-		script.println("alert('Something wrong')");
-		script.println("history.back()");
+		script.println("location.href = 'index.jsp'");
 		script.println("</script>");
 	}
 	script.close();
