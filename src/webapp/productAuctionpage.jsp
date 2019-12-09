@@ -18,6 +18,8 @@
 <h1>
     Product Auction Page <br>
 </h1>
+
+<form action="productAuctionpage.jsp" method="post">
     <!--
 
     <label>Product Name</label> <br>
@@ -144,9 +146,9 @@
         }
     %>
 </table>
-<form action="./WishlistAction.jsp" method="post">
-    <input type="submit" value="WishList"> WishList <br>
-</form>
+
+    <a href="./WishlistAction.jsp"> Wishlist </a><br>
+
 <form action="./ProductAuctionAction.jsp" method="post">
     <input type="submit" value="Bid!"> Bid! <br>
 </form>
