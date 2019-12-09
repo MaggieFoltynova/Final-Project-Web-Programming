@@ -1,0 +1,92 @@
+////////////////////////////////////////////////////////////////////////////////
+<Functions - Administrator>
+
+Member List
+1. Student ID					/* done */	"UserDTO.java"
+2. Password					/* done */	"UserDTO.java"
+3. Name						/* done */	"UserDTO.java"
+4. Classification (Buyer or Seller)			/* done */	"UserDTO.java"
+
+Member
+1. Modification of Member Information		/* done */	"AdminModify*.jsp"
+2. Member Deletion				/* done */	"AdminDelete*.jsp"
+
+////////////////////////////////////////////////////////////////////////////////
+<Functions - Seller>
+
+Product Registration
+1. Product General Information:
+Name
+Price
+Trading Place
+Phone Number
+2. Product Status Information:
+Auction
+Purchased
+In Progress
+※ Seller can proceed the auction
+without setting a price.
+
+Product Info
+1. Modification of Product Info.
+2. Deletion of Product.
+
+Seller’s Product List
+1. Product Name
+Number of People Who Wants to Buy
+2. History of Auction
+Price and Bidder (Auction Buyer)
+
+////////////////////////////////////////////////////////////////////////////////
+<Functions - Buyer>
+
+Product List
+1. Product General Information:
+Seller Name
+Product Name
+Price
+Trading Place
+Phone Number
+Status
+
+Shopping List
+1. Calculation and Printing
+the Shopping List
+※ If the auction is over, the amount
+of the auction price should
+be included.
+
+Product Buy
+1. Product Status
+Product Status should be changed when
+‘Buy’ Button is clicked.
+2. Auction Bidding Price
+The suggested bidding price should be
+higher than the current price.
+(Bidding Price > Current Price)
+
+Wish List
+1. Buyer can see the ‘Wish List’
+
+Product Search
+1. Search By
+Seller Name
+Product Name
+Hope Price
+※ Multiple Conditions must be
+combined to enable searching.
+
+////////////////////////////////////////////////////////////////////////////////
+<Functions - Common Page>
+
+Login Page
+1. Sign in with					/* done */	"LoginPage.jsp"
+Student ID and Password
+
+Registration Page
+1. Sign up Page					/* done */	"UserRegistration*.jsp"
+2. ‘User Input Validation’				/* done */	"UserRegistration*.jsp" "CheckIDAction.jsp"
+must be implemented
+
+Product Page
+1. Product Represented on this page.
