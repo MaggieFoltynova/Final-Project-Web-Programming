@@ -26,7 +26,10 @@
 	<%
 	} else if(userID.equals("root")){
 	%>
-		<p>hello master</p>
+		<p>hello master</p> <br>
+		<form action="./LogoutAction.jsp" method="post">
+			<input type="submit" value="Log out">
+		</form> <br>
 		<a href="http://localhost:8080/Final-Project-Web-Programming-master/ModifyUserPage.jsp">Change member information</a>
 	<%
 	} else {
