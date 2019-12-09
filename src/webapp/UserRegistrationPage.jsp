@@ -22,7 +22,7 @@
 		<input type="text" name="userName"> <br>
 		<input type="radio" name="Classification" value="Buyer"> Buyer<br>
 		<input type="radio" name="Classification" value="Seller"> Seller<br>
-		<input type="submit" formaction="./UseregistrationAction.jsp" value="Registration">
+		<input type="submit" formaction="./UserRegistrationAction.jsp" value="Registration">
 	</form>
 </body>
 </html>
