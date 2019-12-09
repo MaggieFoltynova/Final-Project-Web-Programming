@@ -27,6 +27,7 @@
 		<span> <%= userInfo.getUserName() %>&emsp;</span>
 		<span> <%= userInfo.getuserClass() %>&emsp;</span>
 		<a href="http://localhost:8080/Final-Project-Web-Programming-master/AdminDeleteAction.jsp?userID=<%=userInfo.getUserID() %>">KILL</a>
+		<a href="http://localhost:8080/Final-Project-Web-Programming-master/AdminModifyPage.jsp?userID=<%=userInfo.getUserID() %>">Modify</a>
 		<span> <br> </span>
 	<%
 		}
