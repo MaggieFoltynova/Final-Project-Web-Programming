@@ -3,7 +3,6 @@
 <%@ page import="appLayer.user.UserDAO"%>
 <%@ page import="appLayer.user.UserDTO"%>
 <%@ page import="java.io.PrintWriter"%>
-<%@ page import="java.util.ArrayList"%>
 <%@ page import="java.net.URLEncoder"%>
 <!DOCTYPE html>
 <html>
@@ -30,7 +29,7 @@
 		<form action="./LogoutAction.jsp" method="post">
 			<input type="submit" value="Log out">
 		</form> <br>
-		<a href="http://localhost:8080/Final-Project-Web-Programming-master/ModifyUserPage.jsp">Change member information</a>
+		<a href="http://localhost:8080/Final-Project-Web-Programming-master/AdminPage.jsp">Change member information 멤버 숙청하기</a>
 	<%
 	} else {
 	%>
@@ -40,26 +39,6 @@
 		</form> <br>
 	<%
 	}
-	%>
-
-	<h1>
-		<br> show all user list
-	</h1>
-	<p>
-		(userID) (userName) (userClass)
-	<p>
-	<%
-		ArrayList<UserDTO> userList = new ArrayList<UserDTO>();
-		userList = new UserDAO().getList();
-		for(int i = 0; i < userList.size(); ++i) {
-			UserDTO userInfo = userList.get(i);
-	%>
-		<span> <%= userInfo.getUserID() %>&emsp;</span>
-		<span> <%= userInfo.getUserName() %>&emsp;</span>
-		<span> <%= userInfo.getuserClass() %>&emsp;</span>
-		<span> <br> </span>
-	<%
-		}
 	%>
 	
 </body>
