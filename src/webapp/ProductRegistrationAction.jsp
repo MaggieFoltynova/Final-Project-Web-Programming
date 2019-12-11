@@ -1,3 +1,4 @@
+<%@page import="appLayer.user.UserDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ page import="java.io.PrintWriter"%>
@@ -5,15 +6,15 @@
 <%@ page import="appLayer.product.ProductDTO" %>
 <%
 	request.setCharacterEncoding("UTF-8");
-	String productID = request.getParameter("productID");
 	String productName = request.getParameter("productName");
-	String productPrice = request.getParameter("productPrice"); //can be null
-	String sellerName = request.getParameter("sellerName");
-	String sellerNumber = request.getParameter("sellerNumber");
+	int productPrice = Integer.parseInt(request.getParameter("productPrice")); //can be null
+	String sellerID = request.getParameter("sellerID");
+	String sellerName = new UserDAO().getUserName(sellerID);
+	String sellerPhone = request.getParameter("sellerPhone");
 	String productPlace = request.getParameter("productPlace");
-	String productClassification = request.getParameter("productClassification");
+	String productClass = request.getParameter("productClass");
 	
-	if(productID == null || productName == null || sellerName == null || sellerNumber == null || productPlace == null || productClassification == null){
+	if(productName == null || sellerID == null || sellerPhone == null || productPlace == null || productClass == null){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('Missing input')");
@@ -24,19 +25,19 @@
 	}
 	
 	ProductDAO productDAO = new ProductDAO();
-	int result = productDAO.registration(new ProductDTO(productID, productName, productPrice,sellerName, sellerNumber, productPlace, productClassification));
-	PrintWriter script = response.getWriter();
+	int result = productDAO.registration(new ProductDTO(0, productName, productPrice, sellerID, sellerName, sellerPhone, productPlace, productClass));
 	if(result == -1){
+		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('Same product already exists')");
 		script.println("history.back()");
 		script.println("</script>");
-	}
+		script.close();}
 	else{
+		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("location.href = 'index.jsp'");
 		script.println("</script>");
-	}
-	script.close();
+		script.close();}
 	return;
 %>
