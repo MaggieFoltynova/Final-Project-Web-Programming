@@ -86,7 +86,7 @@ public class UserDAO {	//Access Object
 		return false;	// Something wrong in database
 	}
 	
-	public int Checkduplicaition(String userID) {
+	public int CheckDuplication(String userID) {
 		String SQL = "SELECT * FROM USER WHERE userID = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;

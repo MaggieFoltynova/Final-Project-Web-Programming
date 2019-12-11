@@ -19,7 +19,7 @@
 	}
 	
 	UserDAO userDAO = new UserDAO();
-	int result = userDAO.Checkduplicaition(userID);
+	int result = userDAO.CheckDuplication(userID);
 	PrintWriter script = response.getWriter();
 	script.println("<script>");
 	if(result == 1)
