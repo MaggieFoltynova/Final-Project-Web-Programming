@@ -1,7 +1,5 @@
 package appLayer.product;
 
-import appLayer.product.ProductDTO;
-import appLayer.user.UserDTO;
 import appLayer.util.DatabaseUtil;
 
 import java.sql.Connection;
@@ -11,7 +9,7 @@ import java.util.ArrayList;
 
 public class ProductDAO {
     public int registration(ProductDTO product) {
-        String SQL = "INSERT INTO PRODUCT VALUE (NULL, ?, ?, ?, ?, ?, ?, ?, NULL, 0)";
+        String SQL = "INSERT INTO PRODUCT VALUE (NULL, ?, ?, ?, ?, ?, ?, ?, ?, NULL, 0)";
         Connection conn = null;
         PreparedStatement pstmt = null;
         try {

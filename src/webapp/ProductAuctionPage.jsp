@@ -127,7 +127,7 @@
         try{
             connection = DriverManager.getConnection(connectionUrl+database, userID, password);
             statement = connection.createStatement();
-            String SQL ="SELECT productName, productPrice, sellerName, sellerNumber, productPlace FROM PRODUCT";
+            String SQL ="SELECT productName, productPrice, sellerName, sellerPhone, productPlace FROM PRODUCT";
             resultSet = statement.executeQuery(SQL);
             while(resultSet.next()){
     %>
