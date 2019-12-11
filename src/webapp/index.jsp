@@ -12,7 +12,8 @@
 </head>
 <body>
 <%
-	String userID = (String)session.getAttribute("userID");
+String userID = (String)session.getAttribute("userID");
+String userClass = (String)session.getAttribute("userClass");
 %>
 	<h1>
 		Main page <br>
@@ -31,13 +32,24 @@
 		</form> <br>
 		<a href="http://localhost:8080/Final-Project-Web-Programming-master/AdminPage.jsp">Change member information 멤버 숙청하기</a>
 	<%
-	} else {
+	} else{
 	%>
 		<p>hello <%=userID %></p>
+		<p>Your Class : <%=userClass %></p>
 		<form action="./LogoutAction.jsp" method="post">
 			<input type="submit" value="Log out">
 		</form> <br>
 	<%
+		if(userClass.equals("Buyer")){
+	%>		
+		<a href="http://localhost:8080/Final-Project-Web-Programming-master/BuyerPage.jsp">Shopping</a>	
+	<%	
+		} else{
+	%>
+		<a href="http://localhost:8080/Final-Project-Web-Programming-master/ProductRegistrationPage.jsp">register new product</a>
+		<a href="http://localhost:8080/Final-Project-Web-Programming-master/SellerPage.jsp">My products</a>
+	<%
+		}
 	}
 	%>
 	
