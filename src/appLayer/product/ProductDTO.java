@@ -1,13 +1,13 @@
 package appLayer.product;
 
 public class ProductDTO {
-    private int productNum;			// auto incremented
-    private String productName;			// eg) pencil
-    private int productPrice;			// eg) 100
-    private String sellerID;			// seller doesn't need to type the id, it will passed by argument
-    private String sellerName;			// seller doesn't need to type the id, it will passed by argument
-    private String sellerPhone;			// 01012341234
-    private String productPlace;		// eg) SKKU lobrary
+        private int productNum;			// auto incremented
+ 	private String productName;		// eg) pencil
+	private int productPrice;		// eg) 100
+        private String sellerID;		// seller doesn't need to type the id, it will passed by argument
+        private String sellerName;		// seller doesn't need to type the id, it will passed by argument
+        private String sellerPhone;		// 01012341234
+        private String productPlace;		// eg) SKKU lobrary
 	private String productClass;		// flea or auction
 	private String productStatus;		// selling or sold out or remainedTime(auction)
 	private int wishCount;			// start in 0
