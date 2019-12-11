@@ -1,0 +1,27 @@
+package appLayer.wish;
+
+public class WishDTO {	// Transfer Object
+	private String userID;
+	private int productNum;
+	
+	public String getUserID() {
+		return userID;
+	}
+	public void setUserID(String userID) {
+		this.userID = userID;
+	}
+	public int getProductNum() {
+		return productNum;
+	}
+	public void setProductNum(int productNum) {
+		this.productNum = productNum;
+	}
+	
+	public WishDTO() {
+	}
+	public WishDTO(String userID, int productNum) {
+		super();
+		this.userID = userID;
+		this.productNum = productNum;
+	}
+}
