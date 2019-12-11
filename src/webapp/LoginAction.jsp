@@ -23,6 +23,7 @@
 	PrintWriter script = response.getWriter();
 	if(result == 1){		//success
 		session.setAttribute("userID", userID);
+		session.setAttribute("userClass", userDAO.getUserClass(userID));
 		script.println("<script>");
 		script.println("location.href = 'index.jsp';");
 		script.println("</script>");
