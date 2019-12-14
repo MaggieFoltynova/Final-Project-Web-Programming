@@ -11,7 +11,7 @@ import appLayer.user.UserDTO;
 public class UserDAO {	//Access Object
 
 	public int login(String userID, String userPassword) {
-		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
+		String SQL = "SELECT userPassword, userClass FROM USER WHERE userID = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -22,8 +22,14 @@ public class UserDAO {	//Access Object
 			pstmt.setString(1, userID);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
-				if(rs.getString(1).equals(userPassword))
-					return 1;	// password matched
+				if(rs.getString(1).equals(userPassword)) {
+					if(rs.getString(2).equals("Buyer"))
+						return 1;	// Buyer
+					else if(rs.getString(2).equals("Seller"))
+						return 2;	// Seller
+					else
+						return 3;	// Administer
+				}
 				else
 					return 0;	// not matched
 			}
