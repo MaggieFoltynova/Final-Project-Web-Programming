@@ -1,0 +1,132 @@
+#happy {
+  position: absolute;
+  display: block;
+  top:239px;
+  left:465px;
+}
+
+form {
+  border-radius: 10px;
+  width: 700px;
+  height: 600px;
+  margin-top: 90px;
+  padding: 60px 30px;
+  background-color: rgb(171, 224, 213);
+  /* linear-gradient(100deg,#ecf0f1,#1abc9c); */
+}
+#dup{
+  margin-left: 10px;
+  background-color: #1abc9c;
+  width:20px;
+  height:20px;
+  /* font-weight: 300; */
+  margin-bottom: -4px;
+  color:white;
+  border-radius: 5px;
+  display: inline;
+
+}
+#s{
+  display: inline;
+}
+#dupment{
+  display:inline;
+  vertical-align: center;
+  margin-left: 357px;
+}
+#dupment p{
+  display:inline;
+  color:gray;
+
+}
+#happy {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+
+
+
+
+.tab {
+  color: #1abc9c;
+  font-weight:bold;
+  font-size: 26px;
+  padding-bottom: 10px;
+  margin: 20px 15px 30px 0;
+  display: block;
+  border-bottom: 2px solid white;
+}
+
+.ID, .PW, .Name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1abc9c;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+#buyer, #seller{
+  display:inline;
+  font-size: 12px;
+  font-weight: bold;
+  color:#1abc9c;
+  padding-left:30px;
+  padding-right: 0px;
+}
+.radio{
+  display:inline;
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+}
+.radiodiv{
+  display:inline;
+  margin-top:10px;
+}
+form input {
+  display: block;
+  width: 500px;
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 30px;
+  margin-left: 10px;
+  border: 0px;
+}
+
+#radio{
+  margin-left: 310px;
+}
+#idinput, #pwinput, #repwinput, #nameinput {
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+#btn {
+  margin-top: 30px;
+  background-color: #1abc9c;
+  color:white;
+  width: 530px;
+  height: 40px;
+}
+#btndiv{
+  margin-top: 40px;
+  border-top: 1px solid white;
+  margin-left: 5px;
+}
+
+#formdiv {
+  padding-left: 80px;
+  padding-right: 80px;
+
+}
+
+#radiobox input{
+  margin-top: 20px;
+  display: inline;
+}
+
+  form{
+    margin:0 auto;
+  }

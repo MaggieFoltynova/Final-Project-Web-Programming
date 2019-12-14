@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HIGHLIGHT FLEA MARKET</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div id="vertical-navbar">
+      <div id=signindiv><a href="about.html"><i class="material-icons md-48">home</i>
+        <h3>ABOUT</h3></a></div>
+      <div id=signindiv><a href="signin.html"><i class="material-icons md-48">face</i>
+        <h3>SIGN IN</h3></a></div>
+      <div id=signupdiv><a href="signup.html"><i class="material-icons md-48">how_to_reg</i>
+        <h3>SIGN UP</h3></a></div>
+      <div id=Productdiv><a href="productlist.html"><i class="material-icons md-48">store</i>
+        <h3>PRODUCT</h3></a></div>
+    </div>
+    <div id="header">
+        <img id="logo" src="../images/logo1.png" alt="">
+    </div>
+
+    <div id="user-list">
+        <button type="button" id="delete"><i class="material-icons">delete</i>삭제</button>
+        <button type="button" id="approve"><i class="material-icons">check</i>관리자 승인</button> <input type="hidden" name="csrfmiddlewaretoken" value="1ASQXf8gyZE7vEO6WfKCU51QJ8gtsqAIgyOotzpnbf6YLHF9HnkrnAqhhow57N4D">
+        <table id="table">
+            <thead>
+                <th></th>
+                <th>ID</th>
+                <th>이름</th>
+                <th>가입일</th>
+                <th>등급</th>
+                <th>승인신청</th>
+            </thead>
+            <tbody>
+
+                <tr class="alt">
+                    <td>
+                        <form><input type="checkbox" name="checked" value="prof1"></form>
+                    </td>
+                    <td><b><a href="/administrator/user-detail/prof1">prof1</a></b></td>
+                    <td>김교수</td>
+                    <td>Dec. 9, 2019</td>
+                    <td>professor</td>
+                    <td></td>
+                </tr>
+
+                <tr class="alt">
+                    <td>
+                        <form><input type="checkbox" name="checked" value="prof2"></form>
+                    </td>
+                    <td><b><a href="/administrator/user-detail/prof2">prof2</a></b></td>
+                    <td>이교수</td>
+                    <td>Dec. 9, 2019</td>
+                    <td>professor</td>
+                    <td></td>
+                </tr>
+
+                <tr class="alt">
+                    <td>
+                        <form><input type="checkbox" name="checked" value="stud1"></form>
+                    </td>
+                    <td><b><a href="/administrator/user-detail/stud1">stud1</a></b></td>
+                    <td>학생1</td>
+                    <td>Dec. 9, 2019</td>
+                    <td>student</td>
+                    <td></td>
+                </tr>
+
+                <tr class="alt">
+                    <td>
+                        <form><input type="checkbox" name="checked" value="stud2"></form>
+                    </td>
+                    <td><b><a href="/administrator/user-detail/stud2">stud2</a></b></td>
+                    <td>학생2</td>
+                    <td>Dec. 9, 2019</td>
+                    <td>student</td>
+                    <td></td>
+                </tr>
+
+                <tr class="alt">
+                    <td>
+                        <form><input type="checkbox" name="checked" value="stud3"></form>
+                    </td>
+                    <td><b><a href="/administrator/user-detail/stud3">stud3</a></b></td>
+                    <td>학생3</td>
+                    <td>Dec. 9, 2019</td>
+                    <td>student</td>
+                    <td></td>
+                </tr>
+
+                <tr class="alt">
+                    <td>
+                        <form><input type="checkbox" name="checked" value="gyung_stud"></form>
+                    </td>
+                    <td><b><a href="/administrator/user-detail/gyung_stud">gyung_stud</a></b></td>
+                    <td>gyung_stud</td>
+                    <td>Dec. 10, 2019</td>
+                    <td>student</td>
+                    <td></td>
+                </tr>
+
+                <tr class="alt">
+                    <td>
+                        <form><input type="checkbox" name="checked" value="gyung_prof"></form>
+                    </td>
+                    <td><b><a href="/administrator/user-detail/gyung_prof">gyung_prof</a></b></td>
+                    <td>gyung_prof</td>
+                    <td>Dec. 10, 2019</td>
+                    <td>unapproved_professor</td>
+                    <td> 승인 대기중 </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="/static/js/admin/admin-main.js"></script>
+
+</html>

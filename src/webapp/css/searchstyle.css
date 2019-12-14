@@ -1,0 +1,175 @@
+h1#halmal{
+  position: absolute;
+  top:200px;
+  left:200px;
+}
+form {
+  position: absolute;
+  top:150px;
+  left:465px;
+  border-radius: 10px;
+  width: 700px;
+  height: 400px;
+  margin-top: 90px;
+  padding: 60px 30px;
+  background-color: rgb(171, 224, 213);
+
+  /* background-color: #DAEFF5; */
+  /* background-color: #8CD790; */
+  /* linear-gradient(100deg,#ecf0f1,#1abc9c); */
+}
+.tab {
+  color: #1abc9c;
+  font-weight:bold;
+  font-size: 26px;
+  padding-bottom: 10px;
+  margin: 23px 90px 30px 80px;
+  display: block;
+  border-bottom: 2px solid white;
+  /* background-color: #DAEFF5; */
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+/* .wrap{
+  width:500px;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+} */
+div#informdiv{
+  width:500px;
+  position: absolute;
+}
+label.List{
+  font-size: 18px;
+  font-weight: bold;
+  color: #1abc9c;
+  padding-left: 10px;
+  padding-top: 0px;
+  /* background-color: #DAEFF5; */
+
+}
+.setPrice {
+  width : 500px;
+  position: absolute;
+  top:20px;
+  left:155px;
+}
+.searchType{
+  width : 700px;
+  position: absolute;
+  top: 90px;
+  left:155px;
+}
+.search {
+  width: 700px;
+  position: absolute;
+  top:140px;
+  left:155px;
+}
+.searchName {
+  width: 145px;
+  border: 1.5px solid #1abc9c;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  height: 20px;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+input{
+  font-size: 15px;
+}
+.searchProduct {
+  width: 143px;
+  border: 1.5px solid #1abc9c;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  height: 20px;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+.highPrice {
+  position: absolute;
+  left:235px;
+  width: 110px;
+  border: 1.5px solid #1abc9c;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  height: 20px;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+  color: #9DBFAF;
+}
+.lowPrice {
+  width: 110px;
+  border: 1.5px solid #1abc9c;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  display: inline;
+
+}
+
+.letters{
+  color: #9DBFAF;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+
+
+
+.searchTerm {
+  width: 280px;
+  border: 3px solid #1abc9c;
+  border-right: none;
+  padding: 10px 20px;
+  margin-top: 18px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #1abc9c;
+}
+
+.button {
+  position: absolute;
+  left:153px;
+  top:0px;
+  width: 83px;
+  height: 43px;
+  border: 1px solid #1abc9c;
+  background: #1abc9c;
+  text-align: center;
+  color: #fff;
+  border-radius: 0;
+  font-size: 30px;
+}
+
+.searchButton {
+  position: absolute;
+
+  margin-top: 18px;
+  width: 65px;
+  height: 66px;
+  border: 1px solid #1abc9c;
+  background: #1abc9c;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/

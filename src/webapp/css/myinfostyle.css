@@ -1,0 +1,84 @@
+h1#halmal{
+  position: absolute;
+  top:200px;
+  left:200px;
+}
+#happy {
+  position: absolute;
+  display: block;
+  top:150px;
+  left:465px;
+}
+
+
+.tab {
+  color: #1abc9c;
+  font-weight:bold;
+  font-size: 26px;
+  padding-bottom: 10px;
+  margin: 20px 15px 30px 0;
+  display: block;
+  border-bottom: 2px solid white;
+  /* background-color: #DAEFF5; */
+
+}
+
+
+label.List{
+  font-size: 18px;
+  font-weight: bold;
+  color: #1abc9c;
+  padding-left: 30px;
+  padding-top: 20px;
+  /* background-color: #DAEFF5; */
+
+}
+
+div.data {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  /* background-color: #DAEFF5; */
+
+}
+div.data p{
+  background-color: white;
+  margin-left: 50px;
+  margin-top: 0px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  width:400px;
+}
+
+
+#btn {
+  margin-top: 30px;
+  background-color: #1abc9c;
+  color:white;
+  width: 530px;
+  height: 40px;
+}
+#btndiv{
+  margin-top: 40px;
+  border-top: 1px solid white;
+  margin-left: 0px;
+
+
+}
+#formdiv {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+form {
+  border-radius: 10px;
+  width: 700px;
+  height: 500px;
+  margin-top: 90px;
+  padding: 60px 30px;
+  background-color: rgb(171, 224, 213);
+
+  /* background-color: #DAEFF5; */
+  /* background-color: #8CD790; */
+  /* linear-gradient(100deg,#ecf0f1,#1abc9c); */
+}
