@@ -8,7 +8,7 @@
 <h1>
     Product Registration Page <br>
 </h1>
-<form action="./ProductRegistrationAction.jsp" method="post">
+<form action="./ProductRegistrationAction.jsp" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="sellerID" value="<%=userID%>">
     <label>Product Name</label> <br>
     <input type="text" name="productName"> <br>
