@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class ProductDAO {
     public int registration(ProductDTO product) {
-        String SQL = "INSERT INTO PRODUCT VALUE (NULL, ?, ?, ?, ?, ?, ?, ?, ?, NULL, 0)";
+        String SQL = "INSERT INTO PRODUCT VALUE (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, 0)";
         Connection conn = null;
         PreparedStatement pstmt = null;
         try {
@@ -23,6 +23,7 @@ public class ProductDAO {
             pstmt.setString(5, product.getSellerPhone());
             pstmt.setString(6, product.getProductPlace());
             pstmt.setString(7, product.getProductClass());
+            pstmt.setString(8, product.getProductImg());
             return pstmt.executeUpdate();	// return 1 if success
         } catch(Exception e) {
             e.printStackTrace();
@@ -53,7 +54,8 @@ public class ProductDAO {
 					rs.getString(5),
 					rs.getString(6),
 					rs.getString(7),
-					rs.getString(8)
+					rs.getString(8),
+                    rs.getString(9)
 				);
 				allProducts.add(productInfo);
 			}

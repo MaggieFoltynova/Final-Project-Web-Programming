@@ -20,7 +20,7 @@
     <input type="text" name="productPlace"> <br>
     <input type="radio" name="productClass" value="FleaMarket">Flea Market<br>
     <input type="radio" name="productClass" value="Auction">Auction<br>
-    <input type="file" name="" value="">Photo Upload<br>
+    <input type="file" name="productImg" value="">Photo Upload<br>
     <input type="submit" value="Registration">
 </form>
 

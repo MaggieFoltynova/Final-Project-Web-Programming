@@ -20,80 +20,12 @@
 </h1>
 
 <form action="ProductAuctionPage.jsp" method="post">
-    <!--
 
-    <label>Product Name</label> <br>
-    <input type="text" name="productName"> <br>
-
-    <label>Current product price </label> <br>
-    <input type="text" name="productPrice"> <br>
-
-    <label>Seller Name</label> <br>
-    <input type="text" name="sellerName"> <br>
-
-    <label>Seller Number</label> <br>
-    <input type="text" name="sellerNumber"> <br>
-
-    <label>Trading place</label> <br>
-    <input type="text" name="productPlace"> <br>
-
-
-    <%/*
-        String id = request.getParameter("productID");
-        String driver = "com.mysql.jdbc.Driver";
-        String connectionUrl = "jdbc:mysql://localhost:3306/";
-        String database = request.getParameter("database");
-        String productName = request.getParameter("productName");
-        String sellerName = request.getParameter("sellerName");
-        String sellerNumber = request.getParameter("sellerNumber");
-        String productPlace= request.getParameter("productPlace");
-
-        try {
-            Class.forName(driver);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
-        try{
-            try {
-                connection = DriverManager.getConnection(connectionUrl + database, productName, sellerName, sellerNumber, productPlace);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            assert connection != null;
-            try {
-                statement=connection.createStatement();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            String sql ="select * from users";
-            assert statement != null;
-            try {
-                resultSet = statement.executeQuery(sql);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            assert resultSet != null;
-            while(true){
-                try {
-                    if (!resultSet.next()) break;
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                */
-    %>
-
-    put wish list-->
+    <!--put wish list-->
 
     <!--current price-->
 
-    <!-- picture of the product-->
-
-
-
-
+    <!-- picture of the product DONE-->
 
 
     <%
@@ -121,13 +53,14 @@
         <td>Seller Name</td>
         <td>Seller Number</td>
         <td>Trading Place</td>
+        <td>Photo</td>
 
     </tr>
     <%
         try{
             connection = DriverManager.getConnection(connectionUrl+database, userID, password);
             statement = connection.createStatement();
-            String SQL ="SELECT productName, productPrice, sellerName, sellerPhone, productPlace FROM PRODUCT";
+            String SQL ="SELECT productName, productPrice, sellerName, sellerPhone, productPlace, productImg FROM PRODUCT";
             resultSet = statement.executeQuery(SQL);
             while(resultSet.next()){
     %>
@@ -137,6 +70,7 @@
         <td><%=resultSet.getString("sellerName") %></td>
         <td><%=resultSet.getString("sellerNumber") %></td>
         <td><%=resultSet.getString("productPlace") %></td>
+        <td><%=resultSet.getBlob("productImg")%></td>
     </tr>
     <%
             }
@@ -147,7 +81,7 @@
     %>
 </table>
 
-    <a href="./WishlistAction.jsp"> Wishlist </a><br>
+    <a href="./WishAction.jsp"> Wishlist </a><br>
 
 <form action="./ProductAuctionAction.jsp" method="post">
     <input type="submit" value="Bid!"> Bid! <br>

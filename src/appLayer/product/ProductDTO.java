@@ -11,6 +11,7 @@ public class ProductDTO {
 	private String productClass;		// flea or auction
 	private String productStatus;		// selling or sold out or remainedTime(if auction)
 	private int wishCount;			// start in 0 and ++ when someone add it in his wish list
+	private String productImg;		 //product Image
 	
 	public int getProductNum() {
 		return productNum;
@@ -66,11 +67,14 @@ public class ProductDTO {
 	public int getWishCount() {
 		return wishCount;
 	}
+
+	public String getProductImg(){ return productImg; }
+	public void setProductImg(String productImg){ this.productImg = productImg;}
 	
 	public ProductDTO() {
 	}
 	public ProductDTO(int productNum, String productName, int productPrice, String sellerID, String sellerName, String sellerPhone,
-			String productPlace, String productClass) {
+			String productPlace, String productClass, String productImg) {
 		this.productNum = productNum;
 		this.productName = productName;
 		this.productPrice = productPrice;
@@ -79,5 +83,7 @@ public class ProductDTO {
 		this.sellerPhone = sellerPhone;
 		this.productPlace = productPlace;
 		this.productClass = productClass;
+		this.productImg = productImg;
 	}
+
 }
