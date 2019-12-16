@@ -2,10 +2,10 @@
 <Functions - Administrator>
 
 Member List
-1. Student ID					/* done */	"UserDTO.java"
-2. Password					/* done */	"UserDTO.java"
-3. Name						/* done */	"UserDTO.java"
-4. Classification (Buyer or Seller)			/* done */	"UserDTO.java"
+1. Student ID			                 		/* done */	"UserDTO.java"
+2. Password				                   	/* done */	"UserDTO.java"
+3. Name					                    	/* done */	"UserDTO.java"
+4. Classification (Buyer or Seller)		/* done */	"UserDTO.java"
 
 Member
 1. Modification of Member Information		/* done */	"AdminModify*.jsp"
