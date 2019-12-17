@@ -2,10 +2,10 @@
 <Functions - Administrator>
 
 Member List
-1. Student ID			                 		/* done */	"UserDTO.java"
-2. Password				                   	/* done */	"UserDTO.java"
-3. Name					                    	/* done */	"UserDTO.java"
-4. Classification (Buyer or Seller)		/* done */	"UserDTO.java"
+1. Student ID					/* done */	"UserDTO.java"
+2. Password					/* done */	"UserDTO.java"
+3. Name						/* done */	"UserDTO.java"
+4. Classification (Buyer or Seller)			/* done */	"UserDTO.java"
 
 Member
 1. Modification of Member Information		/* done */	"AdminModify*.jsp"
@@ -14,12 +14,15 @@ Member
 ////////////////////////////////////////////////////////////////////////////////
 <Functions - Seller>
 
-Product Registration
+Product Registration 
+  ("ProductRegistrationAction.jsp" for the function implementation, "ProductRegistrationPage.jsp" for the frontend    implementation)
+
 1. Product General Information:
 Name
 Price
 Trading Place
 Phone Number
+Picture
 2. Product Status Information:
 Auction
 Purchased
@@ -68,13 +71,14 @@ higher than the current price.
 Wish List
 1. Buyer can see the ‘Wish List’
 
-Product Search
+Product Search 
+  ("ProductSearchAction.jsp" for the function implementation, "ProductSearch.jsp" for the frontend implementation)
 1. Search By
 Seller Name
 Product Name
 Hope Price
 ※ Multiple Conditions must be
-combined to enable searching.
+combined to enable searching. 
 
 ////////////////////////////////////////////////////////////////////////////////
 <Functions - Common Page>
@@ -90,3 +94,19 @@ must be implemented
 
 Product Page
 1. Product Represented on this page.
+
+
+////////////////////////////////////////////////////////////////////////////////
+BACKEND
+
+For Product information: "Product DAO" (with implementations of the functions and connecting it with the database), "Product DTO" (with get, set functions)
+
+For User information: "User DAO" (with implementations of the functions and connecting it with the database), "User DTO" (with get, set functions)
+
+For Wishlist information: "Wish DAO" (with implementations of the functions and connecting it with the database), "Wish DTO" (with get, set functions)
+
+For Database utility: "DatabaseUtil" (connects to the database) 
+
+////////////////////////////////////////////////////////////////////////////////
+FRONTEND
+
