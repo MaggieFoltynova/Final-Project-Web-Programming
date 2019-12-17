@@ -2,14 +2,14 @@
 <Functions - Administrator>
 
 Member List
-1. Student ID					/* done */	"UserDTO.java"
-2. Password					/* done */	"UserDTO.java"
-3. Name						/* done */	"UserDTO.java"
+1. Student ID				            	/* done */	"UserDTO.java"
+2. Password					                /* done */	"UserDTO.java"
+3. Name						                /* done */	"UserDTO.java"
 4. Classification (Buyer or Seller)			/* done */	"UserDTO.java"
 
 Member
-1. Modification of Member Information		/* done */	"AdminModify*.jsp"
-2. Member Deletion				/* done */	"AdminDelete*.jsp"
+1. Modification of Member Information		/* done */	"AdminUserList.jsp" + "AdminModifyAction.jsp"
+2. Member Deletion			            	/* done */	"AdminUserList.jsp" + "AdminDeleteAction.jsp"
 
 ////////////////////////////////////////////////////////////////////////////////
 <Functions - Seller>
@@ -17,34 +17,36 @@ Member
 Product Registration 
   ("ProductRegistrationAction.jsp" for the function implementation, "ProductRegistrationPage.jsp" for the frontend    implementation)
 
-1. Product General Information:
+1. Product General Information:             /* done */	"ProductDTO.java"
 Name
 Price
 Trading Place
 Phone Number
 Picture
-2. Product Status Information:
+
+2. Product Status Information:               /* done */	"ProductDTO.java"
 Auction
 Purchased
 In Progress
-※ Seller can proceed the auction
+
+※ Seller can proceed the auction             /* some error */
 without setting a price.
 
-Product Info
+Product Info                                /* not yet. but all functions are implemented. i can make it until today */
 1. Modification of Product Info.
 2. Deletion of Product.
 
 Seller’s Product List
-1. Product Name
+1. Product Name                              /* done */ "Seller"
 Number of People Who Wants to Buy
-2. History of Auction
+2. History of Auction                       /* action GG */
 Price and Bidder (Auction Buyer)
 
 ////////////////////////////////////////////////////////////////////////////////
 <Functions - Buyer>
 
 Product List
-1. Product General Information:
+1. Product General Information:             /* done */
 Seller Name
 Product Name
 Price
@@ -53,27 +55,27 @@ Phone Number
 Status
 
 Shopping List
-1. Calculation and Printing
+1. Calculation and Printing                 /* done */
 the Shopping List
-※ If the auction is over, the amount
+※ If the auction is over, the amount        /* action GG */
 of the auction price should
 be included.
 
 Product Buy
-1. Product Status
+1. Product Status                           /* done */
 Product Status should be changed when
 ‘Buy’ Button is clicked.
-2. Auction Bidding Price
+2. Auction Bidding Price                    /* action GG */
 The suggested bidding price should be
 higher than the current price.
 (Bidding Price > Current Price)
 
 Wish List
-1. Buyer can see the ‘Wish List’
+1. Buyer can see the ‘Wish List’            /* done */
 
 Product Search 
   ("ProductSearchAction.jsp" for the function implementation, "ProductSearch.jsp" for the frontend implementation)
-1. Search By
+1. Search By                                /* not yet. but all functions are implemented. i can make it until today */
 Seller Name
 Product Name
 Hope Price
@@ -89,11 +91,11 @@ Student ID and Password
 
 Registration Page
 1. Sign up Page					/* done */	"UserRegistration*.jsp"
-2. ‘User Input Validation’				/* done */	"UserRegistration*.jsp" "CheckIDAction.jsp"
+2. ‘User Input Validation’		/* done */	"UserRegistration*.jsp" "CheckIDAction.jsp"
 must be implemented
 
 Product Page
-1. Product Represented on this page.
+1. Product Represented on this page.        /* done */
 
 
 ////////////////////////////////////////////////////////////////////////////////
