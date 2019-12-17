@@ -55,7 +55,7 @@ public class UserDAO {	//Access Object
 			pstmt.setString(1, user.getUserID());
 			pstmt.setString(2, user.getUserPassword());
 			pstmt.setString(3, user.getUserName());
-			pstmt.setString(4, user.getuserClass());
+			pstmt.setString(4, user.getUserClass());
 			return pstmt.executeUpdate();
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -135,9 +135,9 @@ public class UserDAO {	//Access Object
 		return -2;	// Something wrong in database
 	}
 	
-	public ArrayList<UserDTO> getList(){
+	public ArrayList<UserDTO> getList(int pageNumber){
 		ArrayList<UserDTO> allUsers = null;
-		String SQL = "SELECT * FROM USER";
+		String SQL = "SELECT * FROM USER LIMIT "  + pageNumber * 10 + " , " + (pageNumber +1 ) * 10 + ";";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
