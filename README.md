@@ -22,7 +22,7 @@ CREATE TABLE product (
     PRIMARY KEY (productNum)
 );
 
-CREATE TABLE tmp(
+CREATE TABLE user(
     userID VARCHAR(20) NOT NULL,
     userPassword VARCHAR(20) NOT NULL,
     userName VARCHAR(20) NOT NULL,
