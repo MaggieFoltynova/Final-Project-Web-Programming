@@ -137,7 +137,7 @@ public class UserDAO {	//Access Object
 	
 	public ArrayList<UserDTO> getList(int pageNumber){
 		ArrayList<UserDTO> allUsers = null;
-		String SQL = "SELECT * FROM USER LIMIT "  + pageNumber * 10 + " , " + (pageNumber +1 ) * 10 + ";";
+		String SQL = "SELECT * FROM USER LIMIT "  + pageNumber * 10 + " , " + (pageNumber +1 ) * 11 + ";";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
