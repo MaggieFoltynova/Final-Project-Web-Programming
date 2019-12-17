@@ -1,4 +1,4 @@
-package webapp;
+/*package webapp;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +15,7 @@ public class login extends HttpServlet {
         out.print("doPost-version:");
         //Posts the name of the logged person with their password
         out.print("login-name: " + request.getParameter("loginname") + " password: " + request.getParameter("password"));
-        */
+
         User userObject = new User();
 
         request.setAttribute("username", request.getParameter("loginname"));
@@ -36,3 +36,6 @@ public class login extends HttpServlet {
         out.print("login-name" + request.getParameter("loginname") + "password" + request.getParameter("password"));
     }
 }
+
+
+ */

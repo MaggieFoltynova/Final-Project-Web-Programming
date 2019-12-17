@@ -24,7 +24,7 @@ public class UserDTO {	// Transfer Object
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getuserClass() {
+	public String getUserClass() {
 		return userClass;
 	}
 	public void setUserClass(String userClass) {
@@ -39,4 +39,5 @@ public class UserDTO {	// Transfer Object
 		this.userName = userName;
 		this.userClass = userClass;
 	}
+
 }
