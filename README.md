@@ -1,6 +1,3 @@
-I'll back in 3 pm.
-i have a ewam in 1:30
-
 CREATE TABLE product (
     productNum INT NOT NULL AUTO_INCREMENT,
     productName VARCHAR(20) NOT NULL,
