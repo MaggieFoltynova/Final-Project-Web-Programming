@@ -30,4 +30,4 @@ CREATE TABLE user(
     PRIMARY KEY (userID)
 );
 
-insert into tmp value ('root', 'root', 'Master', 'Administer');
+insert into user value ('root', 'root', 'Master', 'Administer');
