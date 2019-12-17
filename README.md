@@ -30,4 +30,9 @@ CREATE TABLE user(
     PRIMARY KEY (userID)
 );
 
+
+You have to login before enter "admin*", "buyer*", "seller*" page
+
 insert into user value ('root', 'root', 'Master', 'Administer');
+insert into user value ('buyer', '1234', 'Mr_buyer', 'Buyer');
+insert into user value ('seller', '1234', 'Ms_seller', 'Seller');
