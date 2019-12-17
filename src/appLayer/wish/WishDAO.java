@@ -29,4 +29,33 @@ public class WishDAO {	//Access Object
 		}
 		return -1;	// registration failed
 	}
+	
+	public ArrayList<WishDTO> getList(String userID, int pageNumber){
+		ArrayList<WishDTO> wishList = null;
+		String SQL = "SELECT * FROM wish WHERE userID = ? LIMIT " + pageNumber * 5 + " , " + (pageNumber + 1) * 6 + ";";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = appLayer.util.DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			wishList = new ArrayList<WishDTO>();
+			while(rs.next()) {
+				WishDTO wishInfo = new WishDTO(
+					rs.getString(1),
+					rs.getInt(2)
+				);
+				wishList.add(wishInfo);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {if(conn != null) conn.close();} catch(Exception e) {e.printStackTrace();}
+			try {if(pstmt != null) pstmt.close();} catch(Exception e) {e.printStackTrace();}
+			try {if(rs != null) rs.close();} catch(Exception e) {e.printStackTrace();}
+		}
+		return wishList;
+	}
 }
