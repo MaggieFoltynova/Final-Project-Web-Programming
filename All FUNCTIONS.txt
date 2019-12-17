@@ -57,7 +57,7 @@ Status
 Shopping List
 1. Calculation and Printing                 /* done */
 the Shopping List
-※ If the auction is over, the amount        /* action GG */
+※ If the auction is over, the amount        /* auction GG */
 of the auction price should
 be included.
 
@@ -65,7 +65,7 @@ Product Buy
 1. Product Status                           /* done */
 Product Status should be changed when
 ‘Buy’ Button is clicked.
-2. Auction Bidding Price                    /* action GG */
+2. Auction Bidding Price                    /* auction GG */
 The suggested bidding price should be
 higher than the current price.
 (Bidding Price > Current Price)
